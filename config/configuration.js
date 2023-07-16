@@ -7,9 +7,12 @@ module.exports = fp(async function (fastify, opts) {
         confKey: 'config',
         schema: {
             type: 'object',
-            required: ['SECRET_KEY'],
+            required: ['SECRET_KEY', 'PORT'],
             properties: {
                 SECRET_KEY: {
+                    type: 'string'
+                },
+                PORT: {
                     type: 'string'
                 }
             }

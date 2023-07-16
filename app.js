@@ -27,8 +27,10 @@ const fastifyServer = async (opts) => {
 }
 
 fastifyServer().then((fastifyObj) => {
-    fastifyObj.listen({ port: 8081 }, (err) => {
-        console.error(err);
+    const port = fastify.config.PORT;
+
+    fastifyObj.listen({ port: port }, (res) => {
+        console.error(`Server listening at ${port}`);
     });
 }).catch((err) => {
     console.log(err);

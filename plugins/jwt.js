@@ -1,3 +1,5 @@
+'use strict'
+
 const fastifyJwt = require('@fastify/jwt');
 const fp = require('fastify-plugin');
 
